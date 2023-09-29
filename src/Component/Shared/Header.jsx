@@ -8,12 +8,12 @@ const Header = () => {
       {/* -----------------------Navbar--------------------------- */}
 
       <div className="flex items-center justify-between">
-        <div>
+        <div className="flex gap-1 items-center">
           <img
             className="w-24"
             src="https://i.postimg.cc/Bvh66ykR/Jsd-itverse.png"
             alt="LOGO"
-          />
+          />  <h1 className="text-gray-700 text-2xl font-bold">IT UNIVERSE</h1>
         </div>
         <div className=" flex  items-center gap-4">
           <NavLink
