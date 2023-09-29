@@ -10,6 +10,7 @@ import Home from "./Component/Home/Home";
 import Courses from "./Component/Course/Courses";
 import Instructor from "./Component/InStructors/Instructors";
 import StudentClass from "./Component/MyClass/Student/StudentClass";
+import Error from "./Component/Error/Error";
 
 const router = createBrowserRouter([
   {
@@ -32,8 +33,12 @@ const router = createBrowserRouter([
         path: "course",
     element: <Courses/>
       }
+      ,{
+        path:"*",
+        element:<Error/>
+      }
     ]
-  },
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

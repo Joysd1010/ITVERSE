@@ -52,9 +52,9 @@ const Header = () => {
               to="/Class"
               className={({ isActive }) =>
               isActive
-                ? "text-white font-bold text-base md:text-xl px-5 py-2 rounded-md bg-blue-600  duration-300"
-                : "text-gray-600 font-bold text-base md:text-xl px-5  duration-300"
-            }
+                ? "text-white font-bold text-base md:text-xl px-5 py-2 rounded-md bg-blue-600  duration-300 tooltip tooltip-open tooltip-primary"
+                : "text-gray-600 font-bold text-base md:text-xl px-5  duration-300 tooltip tooltip-open tooltip-primary"
+            } data-tip="+0"
             ><PiShoppingCartBold size={30}/></NavLink>
 
           <NavLink
