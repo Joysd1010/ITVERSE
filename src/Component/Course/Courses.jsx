@@ -40,11 +40,15 @@ const Courses = () => {
     //    console.log(data)
   };
   const RatingSOrter = () => {
-    setData(ALLClass.sort((a, b) => b.rating - a.rating));
+    const sortedData=[...data]
+    sortedData.sort((a, b) => b.rating - a.rating);
+    setData(sortedData)
+
   };
   const priceSOrter = () => {
-    const sorted = ALLClass.sort((a, b) => b.price - a.price);
-    setData(sorted);
+    const sortedData=[...data]
+    sortedData.sort((a, b) => b.price - a.price);
+   setData(sortedData)
   };
   return (
     <div className=" px-10">
