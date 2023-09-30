@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import ClassCard from "../Course/ClassCard";
 
 const Home = () => {
   const CourseData = useLoaderData();
@@ -58,7 +59,14 @@ const Home = () => {
             
         </div>
 {/* -------------------------------pOPULAR COURSES--------------------------    */}
-
+<div className="py-3">
+  <h1 className=" text-center text-4xl font-bold text-white py-5">Our Recommended Courses </h1>
+  <div className=" flex gap-10 items-center ">{
+    Popular.slice(0,3).map((session) => (
+      <ClassCard key={session._id} classs={session} />
+    ))
+  }</div>
+</div>
 
       </div>
     </div>
