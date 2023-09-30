@@ -62,7 +62,7 @@ const Header = () => {
         </div>
         <div className="flex justify-between items-center gap-4">
         <NavLink
-              to="/Class"
+              to="/myLesson"
               className={({ isActive }) =>
               isActive
                 ? "text-white font-bold text-base md:text-xl px-5 py-2 rounded-md bg-blue-600  duration-300 tooltip tooltip-open tooltip-primary"

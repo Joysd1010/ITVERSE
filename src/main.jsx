@@ -12,9 +12,11 @@ import Signup from "./Component/LOGIN/Signup/Signup";
 import Login from "./Component/LOGIN/Login/Login";
 import AuthProvider from "./Component/Provider/Authprovider";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import MyClass from "./Component/MyClass/MyClass";
+import CourseDetail from "./Component/Course/CourseDetail";
+import Privateroute from "./Component/PrivateRoute/Privateroute";
 
 const queryClient = new QueryClient();
-
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,12 @@ const router = createBrowserRouter([
         path: "course",
         element: <Courses />,
       },
+
+      {
+        path: "details/:id",
+        element: <CourseDetail />,
+        loader: ({params}) => fetch(`http://localhost:5000/classes/${params.id}`),
+      },
       {
         path: "login",
         element: <Login />,
@@ -52,6 +60,10 @@ const router = createBrowserRouter([
         element: <Error />,
       },
     ],
+  },
+  {
+    path: "mylesson",
+    element: <Privateroute><MyClass/></Privateroute>,
   },
 ]);
 

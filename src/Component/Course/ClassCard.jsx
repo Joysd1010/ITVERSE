@@ -3,6 +3,7 @@ import ReactStars from "react-stars";
 import { AuthContext } from "../Provider/Authprovider";
 import Swal from "sweetalert2";
 import useCart from "../hooks/useCart";
+import { Link, NavLink } from "react-router-dom";
 
 const ClassCard = ({ classs }) => {
 
@@ -63,7 +64,7 @@ const ClassCard = ({ classs }) => {
 
   return (
     <div className="text-gray-700 bg-cyan-400 px-5 py-5 flex flex-col gap-2 rounded-2xl">
-      <img className="w-96 rounded-t-2xl" src={course_logo_image} alt="" />
+     <Link to={`/details/${_id}`}><img className="w-96 rounded-t-2xl" src={course_logo_image} alt="" /></Link> 
       <div className=" flex justify-between">
         <div className=" flex gap-2 items-center">
           <h1 className=" text-lg font-bold">{rating}</h1>
@@ -77,7 +78,7 @@ const ClassCard = ({ classs }) => {
         </div>
         <h1 className=" text-xl font-bold">{price}$</h1>
       </div>
-      <h1 className=" text-xl">{course_name}</h1>
+      <NavLink to={`/details/${_id}`}><h1 className=" text-xl">{course_name}</h1></NavLink>
       <h1 className="text-sm">Category: {category}</h1>
       <h1 className="text-base">Enrolled: {enrolled_students}</h1>
       <div className=" flex items-center justify-between ">

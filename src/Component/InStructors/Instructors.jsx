@@ -6,7 +6,7 @@ const Instructors = () => {
   const classes = useLoaderData();
   const uniqueInstructorsSet = new Set();
 
-  const uniqueInstructorDetailsArray = classes
+  const uniqueInstructorDetailsArray = classes 
     .filter((course) => {
       if (
         !uniqueInstructorsSet.has(course.instructor_details.instructor_name)
@@ -22,11 +22,11 @@ const Instructors = () => {
   return (
     <div className="  px-10">
       <h1 className=" text-center text-4xl text-slate-500 font-bold py-2">
-        Our Talented Instructors{uniqueInstructorDetailsArray.length}
+        Our Talented Instructors
       </h1>
-      <div className="grid grid-cols-3">
+      <div className="grid gap-20 py-5 grid-cols-3">
         {uniqueInstructorDetailsArray.map((teacher) => (
-          <InsturctionCard key={classes._id} tutor={teacher} />
+          <InsturctionCard key={teacher.instructor_name} tutor={teacher} />
         ))}
       </div>
     </div>
