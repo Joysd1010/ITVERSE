@@ -15,6 +15,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import MyClass from "./Component/MyClass/MyClass";
 import CourseDetail from "./Component/Course/CourseDetail";
 import Privateroute from "./Component/PrivateRoute/Privateroute";
+import FrontPage from "./Component/MyClass/FrontPage";
+import Progress from "./Component/MyClass/Student/Progress";
+import Mycart from "./Component/MyClass/Student/Mycart";
+import Classvideo from "./Component/MyClass/Student/Classvideo";
 
 const queryClient = new QueryClient();
 
@@ -64,6 +68,38 @@ const router = createBrowserRouter([
   {
     path: "mylesson",
     element: <Privateroute><MyClass/></Privateroute>,
+    children:[
+      {
+        path:'/mylesson',
+        element: <FrontPage/>
+      },
+      {
+        path:'mylesson/myprogress',
+        element: <Progress/>
+      },
+      {
+        path:'mylesson/myclass',
+        element: <StudentClass/>,
+      },
+      {
+        path:'mylesson/myCart',
+        element: <Mycart/>,
+      },
+
+      {
+        path: "mylesson/myclass",
+        element: <CourseDetail />,
+       
+      
+      },
+
+      {
+        path: "mylesson/video/:id",
+        element: <Classvideo />,
+        loader: ({params}) => fetch(`http://localhost:5000/enroll/${params.id}`),
+       
+      }
+    ]
   },
 ]);
 

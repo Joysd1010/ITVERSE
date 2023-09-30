@@ -1,11 +1,11 @@
 import React from 'react';
 
-const DHeader = () => {
+const Progress = () => {
     return (
         <div>
-            
+            this is my progress
         </div>
     );
 };
 
-export default DHeader;
+export default Progress;

@@ -16,6 +16,9 @@ const CourseDetail = () => {
     instructor_details,
   } = course;
 
+  console.log(instructor_details)
+
+
   return (
     <div className=" mx-10">
       <div className=" flex items-center p-10 gap-10">
