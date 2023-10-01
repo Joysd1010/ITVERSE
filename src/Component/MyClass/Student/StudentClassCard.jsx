@@ -1,11 +1,14 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import ReactStars from "react-stars";
 
 const StudentClassCard = ({ state }) => {
+    const navigate=useNavigate()
+    const handleNavigate=()=>{
+        navigate("/mylesson/video")
+    }
   const {
     rating,
-
     _id,
     course_logo_image,
     instructor_details,
@@ -43,9 +46,9 @@ const StudentClassCard = ({ state }) => {
             />
             <h1>{instructor_details.instructor_name}</h1>
           </div>
-          <NavLink to={`/mylesson/video/${_id}`}>
-            <button className="btn btn-warning">view classes</button>
-          </NavLink>
+          
+          <Link to={`/mylesson/video/${_id}`}> <div className=" btn btn-warning">View Class</div></Link>
+          
         </div>
       </div>
     </div>

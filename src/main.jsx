@@ -78,26 +78,17 @@ const router = createBrowserRouter([
         element: <Progress/>
       },
       {
+        path:'video/:id',
+        element: <Classvideo/>,
+        loader: ({params}) => fetch(`http://localhost:5000/enroll/${params.id}`),
+      },
+      {
         path:'mylesson/myclass',
         element: <StudentClass/>,
       },
       {
         path:'mylesson/myCart',
         element: <Mycart/>,
-      },
-
-      {
-        path: "mylesson/myclass",
-        element: <CourseDetail />,
-       
-      
-      },
-
-      {
-        path: "mylesson/video/:id",
-        element: <Classvideo />,
-        loader: ({params}) => fetch(`http://localhost:5000/enroll/${params.id}`),
-       
       }
     ]
   },
