@@ -39,7 +39,7 @@ const ClassCard = ({ classs }) => {
         
         course_name,
       };
-      fetch("http://localhost:5000/cart", {
+      fetch("https://serverco-de.vercel.app/cart", {
         method: "POST",
         headers: {
           "content-type": "application/json",

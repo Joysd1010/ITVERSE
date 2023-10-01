@@ -35,7 +35,7 @@ const handleEnroll=()=>{
         
         course_name,
       };
-      fetch("http://localhost:5000/enrol", {
+      fetch("https://serverco-de.vercel.app/enrol", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -45,7 +45,7 @@ const handleEnroll=()=>{
         .then((res) => res.json())
         .then((data) => {
             if (data.insertedId) {
-                fetch(`http://localhost:5000/cart/${_id}`, {
+                fetch(`https://serverco-de.vercel.app/cart/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

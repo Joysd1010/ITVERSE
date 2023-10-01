@@ -30,12 +30,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/course"),
+        loader: () => fetch("https://serverco-de.vercel.app/course"),
       },
       {
         path: "instructor",
         element: <Instructor />,
-        loader: () => fetch("http://localhost:5000/course"),
+        loader: () => fetch("https://serverco-de.vercel.app/course"),
       },
       {
         path: "Class",
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
       {
         path: "details/:id",
         element: <CourseDetail />,
-        loader: ({params}) => fetch(`http://localhost:5000/classes/${params.id}`),
+        loader: ({params}) => fetch(`https://serverco-de.vercel.app/classes/${params.id}`),
       },
       {
         path: "login",
@@ -80,7 +80,7 @@ const router = createBrowserRouter([
       {
         path:'video/:id',
         element: <Classvideo/>,
-        loader: ({params}) => fetch(`http://localhost:5000/enroll/${params.id}`),
+        loader: ({params}) => fetch(`https://serverco-de.vercel.app/enroll/${params.id}`),
       },
       {
         path:'mylesson/myclass',

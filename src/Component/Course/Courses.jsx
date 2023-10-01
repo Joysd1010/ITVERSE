@@ -7,7 +7,7 @@ const Courses = () => {
   const [ALLClass, setClass] = useState([]);
   const [data, setData] = useState(ALLClass);
   useEffect(() => {
-    fetch("http://localhost:5000/course")
+    fetch("https://serverco-de.vercel.app/course")
       .then((res) => res.json())
       .then((info) => {
         setClass(info);

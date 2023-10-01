@@ -7,7 +7,7 @@ const StudentClass = () => {
     const {user}=useContext(AuthContext)
  const [enrollList,setEnroll]=useState([])
  useEffect(()=>{
-    fetch("http://localhost:5000/enroll")
+    fetch("https://serverco-de.vercel.app/enroll")
     .then(res=>res.json())
     .then(data=>{
         setEnroll(data);

@@ -8,7 +8,7 @@ const Classvideo = () => {
   const enroll = useLoaderData();
 const [courseProgress,setprogress]=useState([])
 useEffect(()=>{
-    fetch("http://localhost:5000/progress")
+    fetch("https://serverco-de.vercel.app/progress")
     .then(res=>res.json())
     .then(data=>{
         setprogress(data.filter(info=>info.course==enroll._id))
@@ -18,7 +18,7 @@ useEffect(()=>{
 console.log(courseProgress);
 
   const handleChapter2=()=>{
-    fetch(`http://localhost:5000/progress/${courseProgress._id}`,{
+    fetch(`https://serverco-de.vercel.app/progress/${courseProgress._id}`,{
         method:'PATCH',
         
     }).then(res=>res.json())
@@ -43,7 +43,7 @@ console.log(courseProgress);
       course: enroll._id,
       complete: 50,
     };
-    fetch("http://localhost:5000/progress", {
+    fetch("https://serverco-de.vercel.app/progress", {
       method: "POST",
       headers: {
         "content-type": "application/json",

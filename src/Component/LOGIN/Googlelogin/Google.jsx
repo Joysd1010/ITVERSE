@@ -40,7 +40,7 @@ const Google = () => {
           role: role,
           email: googleUser.email,
         };
-        fetch("http://localhost:5000/user", {
+        fetch("https://serverco-de.vercel.app/user", {
           method: "POST",
           headers: {
             "content-type": "application/json",
