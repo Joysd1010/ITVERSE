@@ -11,9 +11,9 @@ const Mycart = () => {
     return (
         <div>
             <div className="divider"></div> 
-            <div className="divider text-3xl">All courses of your Cart</div> 
+            <div className="divider text-lg md:text-3xl ">All courses of your Cart</div> 
             <div className="divider"></div>
-<div className=' grid grid-cols-2 gap-20 py-5'>
+<div className=' grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 py-5'>
     {
         cart.map((course)=>(<CartCard key={course._id} state={course}/>))
     }

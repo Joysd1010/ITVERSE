@@ -73,7 +73,7 @@ const handleEnroll=()=>{
   return (
     <div>
       <div className="text-gray-700 bg-cyan-400 px-5 py-5 flex flex-col gap-2 rounded-2xl">
-        <Link to={`/details/${classId}`}>
+        <Link to={`/details/${classId}`}  >
           <img className="w-56 rounded-2xl" src={course_logo_image} alt="" />
         </Link>
         <div className=" flex justify-between">

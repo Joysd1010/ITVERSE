@@ -28,7 +28,7 @@ const Header = () => {
       });
   };
   return (
-    <div className=" bg-blue-200 md:px-10 px-3 py-2">
+    <div className=" sticky top-0 z-50 bg-blue-200 md:px-10 px-3 py-2">
       {/* -----------------------Navbar--------------------------- */}
 
       <div className="flex items-center justify-between">
@@ -46,10 +46,10 @@ const Header = () => {
         </NavLink>
 
         <div
-          className={`flex md:static absolute z-50 md:flex-row flex-col justify-between items-start md:items-center gap-2 md:gap-4 ${
+          className={` shadow-xl shadow-blue-500 md:shadow-none flex md:static absolute z-50 md:flex-row flex-col justify-between items-start md:items-center gap-2 md:gap-4 ${
             !menu
               ? "top-16 right-0 md:px-0 px-5 bg-blue-200 rounded-lg py-2 duration-700 "
-              : "top-12 -right-40 duration-700"
+              : "right-0 -top-72 duration-700"
           }`}
         >
           <NavLink
