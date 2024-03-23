@@ -1,4 +1,4 @@
-```markdown
+
 # ITVERSE
 
 ITVERSE is an e-commerce platform for educational technology products. It provides a wide range of educational tools, resources, and services for students, educators, and institutions.
