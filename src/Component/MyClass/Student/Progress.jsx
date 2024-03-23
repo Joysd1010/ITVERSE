@@ -3,7 +3,7 @@ import React from 'react';
 const Progress = () => {
     return (
         <div>
-            this is my progress
+           This feature is comming soon ....
         </div>
     );
 };

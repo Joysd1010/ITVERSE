@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="flex items-center gap-3">
             <img
               className=" w-20"
-              src="https://i.postimg.cc/Bvh66ykR/Jsd-itverse.png"
+              src="https://i.postimg.cc/jSKx2Wc7/Jsd-itverse.png"
               alt="logo"
             />{" "}
             <h1 className=" text-2xl font-semibold">IT UNIVERSE</h1>

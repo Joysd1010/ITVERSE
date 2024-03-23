@@ -21,13 +21,15 @@ const Header = () => {
       {/* -----------------------Navbar--------------------------- */}
 
       <div className="flex items-center justify-between">
-        <div className="flex gap-1 items-center">
+      <NavLink
+            to={"/"}><div className="flex gap-1 items-center">
           <img
             className="w-24"
-            src="https://i.postimg.cc/Bvh66ykR/Jsd-itverse.png"
+            src="https://i.postimg.cc/jSKx2Wc7/Jsd-itverse.png"
             alt="LOGO"
           />  <h1 className="text-gray-700 text-2xl font-bold">IT UNIVERSE</h1>
-        </div>
+        </div></NavLink>
+        
         <div className=" flex  items-center gap-4">
           <NavLink
             to={"/"}

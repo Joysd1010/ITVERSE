@@ -39,7 +39,7 @@ const {user}=useContext(AuthContext)
           <ul className="menu p-4 w-62 min-h-full bg-cyan-200 text-base-content flex flex-col gap-5">
             {/* Sidebar content here */}
             <li>
-              <img className=" w-52" src="https://i.postimg.cc/Bvh66ykR/Jsd-itverse.png"/>
+              <img className=" w-52" src="https://i.postimg.cc/jSKx2Wc7/Jsd-itverse.png"/>
             </li>
             <li><div className=" text-lg font-semibold"><img className=" w-16 rounded-full p-1 border-2 border-t-blue-950 border-b-blue-950" src={user.photoURL}  /> {user.displayName}</div></li>
            {
