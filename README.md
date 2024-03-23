@@ -5,14 +5,12 @@ ITVERSE is an e-commerce platform for educational technology products. It provid
 
 ## Features
 
-- **Product Catalog:** Browse through a diverse selection of educational technology products, including software, hardware, and online courses.
-- **User Authentication:** Create an account or log in securely to access personalized features such as saved items, order history, and recommendations.
-- **Product Search:** Utilize advanced search functionality to find specific products based on criteria such as subject, price, and popularity.
-- **Shopping Cart:** Add desired items to the shopping cart for easy checkout and purchase.
-- **Secure Payments:** Enjoy secure payment processing with various payment methods supported, ensuring a smooth and hassle-free shopping experience.
+- **Product Catalog:** Browse through a diverse selection of courses.
+- **User Authentication:** Create an account or log in securely to access features such as saved items, and recommendations.
+- **Product Search:** Utilize search functionality to find specific courses.
+- **Shopping Cart:** Add desired courses to the shopping cart for easy enroll.
 - **Order Tracking:** Track the status of your orders and receive updates on shipping and delivery.
-- **User Reviews:** Read and submit reviews and ratings for products to help other users make informed purchasing decisions.
-- **Responsive Design:** Access the platform seamlessly across multiple devices, including desktops, laptops, tablets, and smartphones.
+- **Responsive Design:** Access the platform seamlessly across multiple devices, including desktops, laptops, and smartphones.
 
 ## Installation
 
