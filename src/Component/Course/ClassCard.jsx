@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import ReactStars from "react-stars";
+import { FaCartPlus } from "react-icons/fa";
+
 import { AuthContext } from "../Provider/Authprovider";
 import Swal from "sweetalert2";
 import useCart from "../hooks/useCart";
 import { Link, NavLink } from "react-router-dom";
 
 const ClassCard = ({ classs }) => {
-
-
   const {
     _id,
     rating,
@@ -21,12 +21,11 @@ const ClassCard = ({ classs }) => {
     reviews,
   } = classs;
 
-  const [,refetch]=useCart()
+  const [, refetch] = useCart();
 
   const { user } = useContext(AuthContext);
   const handleLesson = () => {
     if (user) {
-     
       const classLesson = {
         classId: _id,
         email: user.email,
@@ -36,7 +35,7 @@ const ClassCard = ({ classs }) => {
         category,
         price,
         instructor_details,
-        
+
         course_name,
       };
       fetch("https://serverco-de.vercel.app/cart", {
@@ -63,8 +62,10 @@ const ClassCard = ({ classs }) => {
   };
 
   return (
-    <div className="text-gray-700 bg-cyan-400 px-5 py-5 flex flex-col gap-2 rounded-2xl">
-     <Link to={`/details/${_id}`}><img className="w-96 rounded-t-2xl" src={course_logo_image} alt="" /></Link> 
+    <div className="text-gray-700 bg-cyan-400 px-5 py-5 flex flex-col justify-between gap-3 rounded-2xl">
+      <Link to={`/details/${_id}`}>
+        <img className="w-96 rounded-t-2xl" src={course_logo_image} alt="" />
+      </Link>
       <div className=" flex justify-between">
         <div className=" flex gap-2 items-center">
           <h1 className=" text-lg font-bold">{rating}</h1>
@@ -78,7 +79,9 @@ const ClassCard = ({ classs }) => {
         </div>
         <h1 className=" text-xl font-bold">{price}$</h1>
       </div>
-      <NavLink to={`/details/${_id}`}><h1 className=" text-xl">{course_name}</h1></NavLink>
+      <NavLink to={`/details/${_id}`}>
+        <h1 className=" text-xl">{course_name}</h1>
+      </NavLink>
       <h1 className="text-sm">Category: {category}</h1>
       <h1 className="text-base">Enrolled: {enrolled_students}</h1>
       <div className=" flex items-center justify-between ">
@@ -90,8 +93,11 @@ const ClassCard = ({ classs }) => {
           />
           <h1>{instructor_details.instructor_name}</h1>
         </div>
-        <button onClick={() => handleLesson()} className="btn btn-warning">
+        <button onClick={() => handleLesson()} className="btn hidden md:block btn-warning">
           Add To Cart
+        </button>
+        <button onClick={() => handleLesson()} className="btn md:hidden btn-warning">
+         <FaCartPlus size={30}/>
         </button>
       </div>
     </div>
